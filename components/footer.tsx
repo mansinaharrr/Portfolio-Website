@@ -105,7 +105,7 @@ export function Footer() {
           <div className="flex items-center space-x-2 text-slate-400 mb-4 md:mb-0">
             <span>© {new Date().getFullYear()} Mansi Nahar. Made with</span>
             <Heart className="h-4 w-4 text-red-400 fill-current" />
-            <span>and lots of coffee</span>
+            <span>and lots of tea</span>
           </div>
 
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>

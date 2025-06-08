@@ -34,13 +34,13 @@ export function Projects() {
 
   const projects = [
     {
-      title: "E-Commerce UI/UX Design",
+      title: "Pet Adoption and Rescue System",
       description:
-        "A modern e-commerce platform design focusing on user experience, featuring intuitive navigation, product showcases, and seamless checkout flow.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Figma", "UI/UX", "Prototyping", "User Research", "Mobile-First"],
-      github: "#",
-      live: "#",
+        "A modern pet adoption platform designed to enhance user experience, featuring streamlined rescue workflows, detailed pet profiles, and an efficient adoption application process.",
+      image: "/pet-adoption-screenshot.png",
+      tags: ["MySQL", "React.js", "Node.js", "TypeScript", "TailWind CSS"],
+      github: "https://github.com/mansinaharrr/Pet-Adoption-and-Rescue-System.git",
+      live: "https://pet-adoption-and-rescue-system.vercel.app/",
       category: "Design",
       featured: true,
     },
@@ -48,10 +48,10 @@ export function Projects() {
       title: "Portfolio Website",
       description:
         "A responsive portfolio website built with Next.js and Tailwind CSS, featuring smooth animations, dark mode, and modern design principles.",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/portfolio-website.png",
       tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Responsive"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/mansinaharrr/Portfolio-Website.git",
+      live: "https://portfolio-website-eight-sigma-74.vercel.app/",
       category: "Web",
       featured: true,
     },
@@ -158,17 +158,16 @@ export function Projects() {
           </div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
           {filteredProjects.map((project, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               whileHover={{ y: -10, scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              className={project.featured ? "lg:col-span-2" : ""}
             >
               <Card className="glass border-white/20 overflow-hidden group h-full">
-                <div className={`relative overflow-hidden ${project.featured ? "h-80" : "h-64"}`}>
+                <div className="relative overflow-hidden h-64">
                   <Image
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
@@ -187,21 +186,35 @@ export function Projects() {
 
                   <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <div className="flex space-x-4">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="border-white/20 bg-black/50 backdrop-blur-sm text-white hover:bg-white/20"
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex"
                       >
-                        <Github className="h-4 w-4 mr-2" />
-                        Code
-                      </Button>
-                      <Button
-                        size="sm"
-                        className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="border-white/20 bg-black/50 backdrop-blur-sm text-white hover:bg-white/20"
+                        >
+                          <Github className="h-4 w-4 mr-2" />
+                          Code
+                        </Button>
+                      </a>
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex"
                       >
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Live Demo
-                      </Button>
+                        <Button
+                          size="sm"
+                          className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700"
+                        >
+                          <ExternalLink className="h-4 w-4 mr-2" />
+                          Live Demo
+                        </Button>
+                      </a>
                     </div>
                   </div>
                 </div>

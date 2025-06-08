@@ -15,7 +15,7 @@ export function Hero() {
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [currentRole, setCurrentRole] = useState(0)
-  const roles = ["UI/UX Designer", "Frontend Developer", "Creative Developer", "Problem Solver", "Tech Enthusiast"]
+  const roles = ["Graphic Designer", "Frontend Developer", "Creative Developer", "Problem Solver", "Tech Enthusiast"]
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -137,7 +137,7 @@ export function Hero() {
               transition={{ delay: 0.8, duration: 0.8 }}
               className="text-base sm:text-lg text-slate-400 max-w-xl lg:max-w-none mx-auto lg:mx-0 leading-relaxed mb-6"
             >
-              Passionate about creating beautiful and functional digital experiences. Specializing in UI/UX design and frontend development, I combine creativity with technical expertise to build engaging web applications.
+              Passionate about creating beautiful and functional digital experiences. Specializing in Graphic design and frontend development, I combine creativity with technical expertise to build engaging web applications.
             </motion.p>
 
             <motion.div
@@ -189,15 +189,21 @@ export function Hero() {
             </motion.div>
 
             <motion.div
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 mb-8 relative z-50 opacity-100"
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6 mb-8 relative z-50"
             >
-              <Button
-                size="lg"
-                className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 hover:from-purple-700 hover:via-pink-700 hover:to-red-700 rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base shadow-2xl shadow-purple-700/30 hover:shadow-purple-700/50 transition-all duration-300 animate-gradient neon-glow"
+              <motion.a
+                href="/#projects"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
-                View My Work
-              </Button>
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 hover:from-purple-700 hover:via-pink-700 hover:to-red-700 rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base shadow-2xl shadow-purple-700/30 hover:shadow-purple-700/50 transition-all duration-300 animate-gradient neon-glow"
+                >
+                  <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 mr-2" />
+                  View My Work
+                </Button>
+              </motion.a>
 
               <Button
                 variant="outline"
@@ -214,9 +220,6 @@ export function Hero() {
           {/* Right side - Profile Image */}
           <motion.div
             className="flex-1 flex justify-center lg:justify-end mt-12 lg:mt-0"
-            initial={{ opacity: 0, x: 20 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 20 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
           >
             <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-white/10 shadow-lg">
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20 rounded-full blur-2xl animate-pulse" />

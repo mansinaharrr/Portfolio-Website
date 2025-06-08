@@ -56,7 +56,7 @@ export function About() {
           <h2 className="text-5xl font-bold text-white mb-6 gradient-text">About Me</h2>
           <div className="w-32 h-1 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 mx-auto mb-8 rounded-full"></div>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
-            I'm a passionate UI/UX designer and frontend developer with a strong foundation in creating beautiful and functional digital experiences. My journey combines creative design thinking with technical implementation skills.
+            I'm a passionate Graphic designer and frontend developer with a strong foundation in creating beautiful and functional digital experiences. My journey combines creative design thinking with technical implementation skills.
           </p>
         </motion.div>
 
@@ -95,7 +95,7 @@ export function About() {
                 },
                 {
                   icon: <Target className="h-6 w-6" />,
-                  text: "UI/UX Designer & Frontend Developer",
+                  text: "Graphic Designer & Frontend Developer",
                   color: "from-pink-600 to-pink-800",
                 },
               ].map((item, index) => (
