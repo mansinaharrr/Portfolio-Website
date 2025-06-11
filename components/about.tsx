@@ -65,7 +65,7 @@ export function About() {
             <div className="space-y-6">
               <p className="text-lg text-slate-300 leading-relaxed">
                 I'm a third-year Computer Science Engineering student with a specialization in Internet of Things (IoT)
-                at SRM University, Kattankulathur, Chennai. My journey combines the analytical mindset of an engineer
+                at SRM Institue of Science and Technology, Kattankulathur, Chennai. My journey combines the analytical mindset of an engineer
                 with the creative vision of a designer.
               </p>
               <p className="text-lg text-slate-300 leading-relaxed">
@@ -121,7 +121,7 @@ export function About() {
             <div className="grid grid-cols-2 gap-6">
               {[
                 { number: "7+", text: "Projects Completed", color: "from-purple-400 to-purple-600", icon: "🚀" },
-                { number: "1+", text: "Years Experience", color: "from-pink-400 to-pink-600", icon: "⏰" },
+                { number: "2+", text: "Years Experience", color: "from-pink-400 to-pink-600", icon: "⏰" },
               ].map((item, index) => (
                 <motion.div
                   key={index}

@@ -104,7 +104,7 @@ export function Skills() {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {skillCategories.map((category, index) => (
             <motion.div
               key={index}
@@ -194,18 +194,12 @@ export function Skills() {
           <h3 className="text-2xl font-semibold text-white mb-8">Additional Technologies</h3>
           <div className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
             {[
-              "Docker",
               "AWS",
-              "Firebase",
               "MongoDB",
               "PostgreSQL",
               "GraphQL",
               "REST APIs",
-              "Microservices",
-              "CI/CD",
               "Testing",
-              "Agile",
-              "Scrum",
             ].map((tech, index) => (
               <motion.div
                 key={tech}

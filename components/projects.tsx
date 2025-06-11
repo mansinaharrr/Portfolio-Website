@@ -41,7 +41,7 @@ export function Projects() {
       tags: ["MySQL", "React.js", "Node.js", "TypeScript", "TailWind CSS"],
       github: "https://github.com/mansinaharrr/Pet-Adoption-and-Rescue-System.git",
       live: "https://pet-adoption-and-rescue-system.vercel.app/",
-      category: "Design",
+      category: "Web",
       featured: true,
     },
     {
@@ -49,39 +49,39 @@ export function Projects() {
       description:
         "A responsive portfolio website built with Next.js and Tailwind CSS, featuring smooth animations, dark mode, and modern design principles.",
       image: "/portfolio-website.png",
-      tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Responsive"],
+      tags: ["Next.js", "TypeScript", "Tailwind CSS", "HTML", "Framer Motion", "Responsive"],
       github: "https://github.com/mansinaharrr/Portfolio-Website.git",
       live: "https://portfolio-website-eight-sigma-74.vercel.app/",
       category: "Web",
       featured: true,
     },
     {
-      title: "Task Management Dashboard",
+      title: "Smart Home App UI Design",
       description:
-        "A sleek task management application with drag-and-drop functionality, real-time updates, and intuitive user interface.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["React", "TypeScript", "Tailwind CSS", "DnD", "Firebase"],
+        "A modern smart home interface focused on clean visuals and usability, featuring intuitive controls, device status monitoring, and a seamless user experience across screens.",
+      image: "/smart-home-app.png",
+      tags: ["Figma", "UI/UX", "Prototyping", "User Research", "Mobile"],
+      github: "#",
+      live: "https://www.figma.com/proto/2JH17ZZm5TEep7cv36kC4z/Untitled?node-id=2-2&starting-point-node-id=2%3A2&t=j9HseKGj09YwHo1R-1",
+      category: "Design",
+      featured: false,
+    },
+    {
+      title: "AI Recipe Generator",
+      description:
+        "An intelligent recipe suggestion app leveraging AI to deliver personalized meal ideas, featuring a responsive UI, real-time ingredient input, and dynamic recipe generation.",
+      image: "/ai-recipe-generator.jpeg",
+      tags: ["React", "MongoDb", "Next Auth", "TailWind CSS", "TypeScript", "OpenAI API"],
       github: "#",
       live: "#",
       category: "Web",
       featured: false,
     },
     {
-      title: "Weather App Design",
+      title: "RFID based Payment System",
       description:
-        "A weather application design featuring clean interfaces, intuitive data visualization, and location-based services.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Figma", "UI/UX", "Prototyping", "Data Visualization", "Mobile"],
-      github: "#",
-      live: "#",
-      category: "Design",
-      featured: false,
-    },
-    {
-      title: "Social Media Dashboard",
-      description:
-        "A comprehensive social media dashboard with analytics, content management, and engagement tracking features.",
-      image: "/placeholder.svg?height=400&width=600",
+        "A contactless payment system built for the college canteen, featuring RFID-based ID scanning, secure transactions, and real-time activity monitoring for a smooth user experience.",
+      image: "/rfid-payment-system.png",
       tags: ["React", "Chart.js", "Tailwind CSS", "API Integration", "Responsive"],
       github: "#",
       live: "#",
@@ -89,14 +89,14 @@ export function Projects() {
       featured: true,
     },
     {
-      title: "Travel App UI Design",
+      title: "Task Scheduler",
       description:
-        "A travel application design focusing on user experience, featuring trip planning, booking, and itinerary management.",
-      image: "/placeholder.svg?height=400&width=600",
-      tags: ["Figma", "UI/UX", "Prototyping", "User Research", "Mobile"],
+        "A full-stack task management application designed for productivity, featuring an intuitive interface, real-time task tracking, and seamless data persistence.",
+      image: "/task-scheduler.png",
+      tags: ["HTML", "CSS", "Java", "JavaScript", "SQLite", "Spark API"],
       github: "#",
       live: "#",
-      category: "Design",
+      category: "Web",
       featured: false,
     },
   ]
@@ -172,7 +172,7 @@ export function Projects() {
                     src={project.image || "/placeholder.svg"}
                     alt={project.title}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="object-cover object-center transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 

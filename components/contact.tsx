@@ -98,24 +98,24 @@ export function Contact() {
             <MessageCircle className="h-8 w-8 text-white" />
           </motion.div>
 
-          <h2 className="text-5xl font-bold text-white mb-6 gradient-text">Get In Touch</h2>
+          <h2 className="text-5xl font-bold text-white mb-6 gradient-text">Let's Build Something!</h2>
           <div className="w-32 h-1 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 mx-auto mb-8 rounded-full"></div>
           <p className="text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed">
             Ready to collaborate on your next project? Let's create something amazing together.
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
-          <motion.div variants={itemVariants} className="space-y-8">
+        <div className="grid lg:grid-cols-1 gap-16 justify-items-center">
+          <motion.div variants={itemVariants} className="space-y-8 text-center">
             <div>
-              <h3 className="text-3xl font-bold text-white mb-6">Let's Connect</h3>
+              <h3 className="text-3xl font-bold text-white mb-6">Portfolio Looking Good? Let’s Chat.</h3>
               <p className="text-lg text-slate-400 leading-relaxed">
                 I'm always excited to work on new projects and collaborate with fellow creators. Whether you have a
                 project in mind or just want to chat about design and technology, feel free to reach out!
               </p>
             </div>
 
-            <div className="space-y-8">
+            <div className="flex flex-row flex-wrap justify-center space-x-20 space-y-0">
               {[
                 {
                   icon: <Mail className="h-6 w-6" />,
@@ -144,7 +144,7 @@ export function Contact() {
                   variants={itemVariants}
                   whileHover={{ x: 10, scale: 1.02 }}
                   transition={{ type: "spring", stiffness: 300 }}
-                  className="flex items-start space-x-6 group"
+                  className="flex items-center space-x-6 group text-center"
                 >
                   <div
                     className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${item.color} flex items-center justify-center shadow-lg group-hover:shadow-xl transition-shadow duration-300`}
@@ -165,7 +165,7 @@ export function Contact() {
             {/* Social Links */}
             <motion.div variants={itemVariants} className="pt-8">
               <h4 className="text-white font-semibold mb-4">Follow Me</h4>
-              <div className="flex space-x-4">
+              <div className="flex space-x-4 justify-center">
                 {[
                   { name: "GitHub", url: "https://github.com/mansinaharrr", color: "hover:text-purple-400" },
                   { name: "LinkedIn", url: "https://www.linkedin.com/in/mansi-nahar-534035351/", color: "hover:text-blue-400" },
@@ -185,100 +185,6 @@ export function Contact() {
                 ))}
               </div>
             </motion.div>
-          </motion.div>
-
-          <motion.div variants={itemVariants}>
-            <Card className="glass border-white/20 overflow-hidden">
-              <CardHeader className="pb-6">
-                <h3 className="text-2xl font-semibold text-white">Send a Message</h3>
-                <p className="text-slate-400">I'll get back to you within 24 hours</p>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <Input
-                        placeholder="First Name"
-                        name="firstName"
-                        value={formState.firstName}
-                        onChange={handleChange}
-                        className="glass border-white/20 text-white placeholder:text-slate-500 focus:border-purple-500 transition-colors"
-                        required
-                      />
-                    </div>
-                    <div>
-                      <Input
-                        placeholder="Last Name"
-                        name="lastName"
-                        value={formState.lastName}
-                        onChange={handleChange}
-                        className="glass border-white/20 text-white placeholder:text-slate-500 focus:border-purple-500 transition-colors"
-                        required
-                      />
-                    </div>
-                  </div>
-                  <div>
-                    <Input
-                      placeholder="Email Address"
-                      type="email"
-                      name="email"
-                      value={formState.email}
-                      onChange={handleChange}
-                      className="glass border-white/20 text-white placeholder:text-slate-500 focus:border-purple-500 transition-colors"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      placeholder="Subject"
-                      name="subject"
-                      value={formState.subject}
-                      onChange={handleChange}
-                      className="glass border-white/20 text-white placeholder:text-slate-500 focus:border-purple-500 transition-colors"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Textarea
-                      placeholder="Your Message"
-                      rows={6}
-                      name="message"
-                      value={formState.message}
-                      onChange={handleChange}
-                      className="glass border-white/20 text-white placeholder:text-slate-500 focus:border-purple-500 transition-colors resize-none"
-                      required
-                    />
-                  </div>
-                  <Button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 py-3 text-lg font-medium transition-all duration-300"
-                  >
-                    {isSubmitting ? (
-                      <div className="flex items-center justify-center">
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-3"></div>
-                        Sending...
-                      </div>
-                    ) : (
-                      <div className="flex items-center justify-center">
-                        <Send className="h-5 w-5 mr-2" />
-                        Send Message
-                      </div>
-                    )}
-                  </Button>
-
-                  {submitSuccess && (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className="text-green-400 text-center p-4 glass rounded-lg border border-green-400/20"
-                    >
-                      ✨ Message sent successfully! I'll get back to you soon.
-                    </motion.div>
-                  )}
-                </form>
-              </CardContent>
-            </Card>
           </motion.div>
         </div>
       </motion.div>

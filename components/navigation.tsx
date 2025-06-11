@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
+import Image from "next/image"
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -14,7 +15,7 @@ export function Navigation() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50)
 
-      const sections = ["home", "about", "skills", "projects", "contact"]
+      const sections = ["home", "about", "skills", "projects", "certifications", "contact"]
       for (const section of sections.reverse()) {
         const element = document.getElementById(section)
         if (element) {
@@ -35,6 +36,7 @@ export function Navigation() {
     { href: "#about", label: "About" },
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
+    { href: "#certifications", label: "Certifications" },
     { href: "#contact", label: "Contact" },
   ]
 
@@ -53,9 +55,15 @@ export function Navigation() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-2xl font-bold"
+            className="relative w-12 h-12"
           >
-            <span className="gradient-text">MN</span>
+            <Image
+              src="/mansi-logo.png"
+              alt="Mansi Nahar Logo"
+              fill
+              className="object-contain"
+              priority
+            />
           </motion.div>
 
           {/* Desktop Navigation */}

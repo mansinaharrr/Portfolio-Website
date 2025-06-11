@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowDown, Github, Linkedin, Mail, Download, Sparkles, Star, Instagram } from "lucide-react"
+import { ArrowDown, Github, Linkedin, Mail, Download, Sparkles, Star, Instagram, Coffee, Heart } from "lucide-react"
 import { motion, useScroll, useTransform, useInView } from "framer-motion"
 import { useEffect, useState, useRef } from "react"
 import Image from "next/image"
@@ -104,8 +104,16 @@ export function Hero() {
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Left side - Text content */}
           <div className="flex-1 text-center lg:text-left">
+            <motion.p
+              className="text-xl sm:text-2xl lg:text-2xl font-light text-slate-300 italic mb-2 ml-2"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+            >
+              Hi! I'm,
+            </motion.p>
             <motion.h1
-              className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 tracking-tight"
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 tracking-tight"
               initial={{ scale: 0.8 }}
               animate={{ scale: 1 }}
               transition={{ duration: 1.2, ease: "easeOut" }}
@@ -137,7 +145,7 @@ export function Hero() {
               transition={{ delay: 0.8, duration: 0.8 }}
               className="text-base sm:text-lg text-slate-400 max-w-xl lg:max-w-none mx-auto lg:mx-0 leading-relaxed mb-6"
             >
-              Passionate about creating beautiful and functional digital experiences. Specializing in Graphic design and frontend development, I combine creativity with technical expertise to build engaging web applications.
+              I love bringing ideas to life through design and code. With a focus on graphic design and frontend development, I enjoy creating digital experiences that look good and feel even better to use.
             </motion.p>
 
             <motion.div
@@ -236,6 +244,11 @@ export function Hero() {
                   }}
                 />
               </div>
+            </div>
+            {/* Icons */}
+            <div className="absolute bottom-4 right-4 z-50 flex items-center space-x-2">
+              <Heart className="w-6 h-6 text-purple-400 opacity-70" />
+              <Coffee className="w-6 h-6 text-purple-400 opacity-70" />
             </div>
           </motion.div>
         </div>

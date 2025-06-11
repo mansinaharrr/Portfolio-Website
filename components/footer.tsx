@@ -18,7 +18,7 @@ export function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid md:grid-cols-3 gap-20 mb-12">
           {/* Brand Section */}
           <div className="space-y-4">
             <span className="text-3xl font-bold gradient-text">Mansi Nahar S</span>
@@ -75,12 +75,13 @@ export function Footer() {
                 { href: "#about", label: "About" },
                 { href: "#skills", label: "Skills" },
                 { href: "#projects", label: "Projects" },
+                { href: "#certifications", label: "Certifications", colStart: "col-start-2" },
                 { href: "#contact", label: "Contact" },
-              ].map((link) => (
+              ].map((link, index) => (
                 <motion.a
                   key={link.href}
                   href={link.href}
-                  className="block text-slate-400 hover:text-white transition-colors duration-300"
+                  className={`block text-slate-400 hover:text-white transition-colors duration-300 ${link.colStart || ''}`}
                   whileHover={{ x: 5 }}
                 >
                   {link.label}
@@ -103,9 +104,9 @@ export function Footer() {
         {/* Bottom Section */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10">
           <div className="flex items-center space-x-2 text-slate-400 mb-4 md:mb-0">
-            <span>© {new Date().getFullYear()} Mansi Nahar. Made with</span>
+            <span>© {new Date().getFullYear()} Mansi Nahar S. Made with</span>
             <Heart className="h-4 w-4 text-red-400 fill-current" />
-            <span>and lots of tea</span>
+            <span>and lots of ☕</span>
           </div>
 
           <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
